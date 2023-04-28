@@ -5,7 +5,7 @@ resta = 0
 num1,num2 = 0,0
 
 # Primero con el ciclo while voy a verificar que un numero de los ingresados sea mayor que el otro  
-while (not(num1>num2 or num2>num1)): # La condicion 
+while (not(num1>num2 or num2>num1)): # La condicion me dice que si en los numeros no hay uno mayor debe pedirlos nuevamente 
     if num1==num2:
         print('Ingrese los numeros a restar')
     num1=int(input('Ingrese un numero: '))
