@@ -1,0 +1,1 @@
+secret_number = random.random
