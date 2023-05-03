@@ -1,3 +1,4 @@
+# ejercicio 3
 divisor=[]
 num = int(input("Ingrese un numero: "))
 x=0

@@ -1,3 +1,4 @@
+# ejercicio 7
 num_positive=1
 mayor=0
 cont=0

@@ -1,3 +1,4 @@
+# ejercicio 6 random
 import random
 
 secret_number = int(random.random()*100)

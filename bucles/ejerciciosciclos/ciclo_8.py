@@ -1,3 +1,4 @@
+# ejercicio 8
 x=int(input("ingresa un numero: "))
 y=int(input("ingresa un numero: "))
 while y!=0:
