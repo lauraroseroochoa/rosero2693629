@@ -9,20 +9,28 @@ max_lista=0
 min_lista=100000
 moda=0
 print(tam)
-lista_ordenada=lista.sort(lista)
+lista_ordenada=[]
 for i in range(tam):
     num=int(random.randrange(100))
     lista.append(num)
     cont+=1
     suma+=num
-    lista_ordenada=lista.sort(lista)
+    lista.sort()
+    if tam%2!=0:
+        print("el numero es impar")
+    else:
+        print('el numero es par')
+        
+   # if lista[i]==lista[i+1]:
+      #moda
 #for i in lista:
- #   if lista[i]==lista[i+1]:
- #       moda
-print(moda)
+  # if lista[i]==lista[i+1]:
+      #moda
+#print(moda)
     
 promedio=int((suma)/cont)    
 print("La lista es",lista)
 print(lista_ordenada)
 print("La resultado de la suma es: ",suma)
 print("El promedio o medio de los elementos de la lista es: ",promedio)
+
