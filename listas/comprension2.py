@@ -7,12 +7,14 @@
 import random
 num1=1
 suma=0
-#num1= int(input('ingrese un numero'))
-lista=[(random.randrange(9))for i in range (random.randint(15,20))]
-print(lista)
 repetidos=[]
+
+lista=[(random.randrange(9))for i in range(random.randint(15,20))]
+print(lista)
+
 while num1<=9:
     num1= int(input('ingrese un numero: '))
+    cont=0
     if num1 in lista: # el operador in me dice si un elemento esta en la lista  
         print('el numero esta en la lista')
     else:
@@ -20,8 +22,14 @@ while num1<=9:
     """for x in lista:
         if num1 in lista:
             sum+=1"""
-    for x in lista:
-        if not in repetidos:
-            repetidos.append(x)
-    else:
-        print('esta repetido')
+    for b in lista:
+        if b == num1:
+            cont+=1
+            for x in range(len(lista)):
+                repetidos.append(x)
+
+    if cont>=2:
+        print('el numero esta repetido')
+        print("numero repetido esta cantidad de veces:")
+        break
+print(cont)
