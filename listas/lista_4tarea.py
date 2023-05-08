@@ -38,6 +38,10 @@ for i in range(tam):
             j=lista[z]
             lista[z]=lista[z+1]
             lista[z+1]=j
+        if len(lista)%2!=0:
+            mediana = (lista[(len(lista) //2)-1] + lista[(len(lista)//2)]) / 2
+        else:
+            mediana= lista[(len(lista)//2)]
    # if lista[i]==lista[i+1]:
       #moda
 #for i in lista:
