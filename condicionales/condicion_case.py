@@ -8,7 +8,7 @@ print('2-restar')
 print('3-multiplicar')
 print('4-dividir')
 selector=(input('Digite la opcion')) # en la variable selector se almacena la opción seleccionada por el usuario
-match selector: # inicio de bloque de matchcase 
+match selector:
     case '1': #En el primer caso está la opción de sumar los numeros 
         print(num1+num2)
     case '2': #En el segundo caso está la opción de restar los numeros
