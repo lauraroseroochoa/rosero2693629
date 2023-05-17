@@ -66,9 +66,9 @@ def mediana_lista(lista):
         else:
             mediana= lista[(len(lista)//2)]
         return mediana
-def posicion_lista(lista):
+#def posicion_lista(lista):
     
-def buscar_lista(lista):
+#def buscar_lista(lista):
 
 l1=llenarLista(15,15)
 print(l1)
