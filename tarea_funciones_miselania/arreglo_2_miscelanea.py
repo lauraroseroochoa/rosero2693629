@@ -141,5 +141,5 @@ lista_1=unir_listas(lista_1,lista_2)
 print(sumarLista(lista_1))
 print("La lista unida es: ",lista_1)
 
-print("el promedio conjunto es: ")
+print("el promedio total de las listas unidas es: ")
 print(round(promedioLista(lista_1),2))

@@ -34,9 +34,8 @@ def hallarQuintiles(lista,valor):
         return f'no se puede hallar el quintil'
 
 
-list=llenarLista(100,1.82)
+list=llenarLista(125,1.82)
 print(list)
-divison=len(list)/5
 print(ordenarListaAsc(list))
 print(len(list))
 num=int(input('ingresa el quintil a hallar: '))
