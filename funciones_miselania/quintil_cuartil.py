@@ -19,32 +19,45 @@ def ordenarListaAsc(lista):
     return lista  
 
 def hallarQuintiles(lista,valor):
-    quintil=valor*len(lista)+1/5
-    if not len(lista)%5==0:
-        quintil=(valor*len(lista)+1/5)=
-    mayor=int(quintil)
-    menor=int((valor-1)*len(lista)/5)
-    if len(lista)>quintil:
+    quintil=int(valor*len(lista)+1/5)
+    print(quintil)
+    if len(lista)%5!=0:
+        x=lista.pop(quintil)
+        y=lista.pop(quintil+1)
+        lista.insert(quintil, x)
+        lista.insert(quintil+1, y)
+        z=round(x+y/2,2)
+        return z
+    else:
+        quintil=int(valor*len(lista)/5)
+        mayor=int(quintil)
+        menor=int((valor-1)*len(lista)/5)
         listaquin=lista[menor:mayor]
         return listaquin
-    else:
-        return f'no se puede hallar el quintil'
+
     
 def hallarCuartiles(lista,valor):
-    cuartil=valor*len(lista)/4
-    mayor=int(cuartil)
-    menor=int((valor-1)*len(lista)/4)
-    if len(lista)>cuartil:
-        listacuar=lista[menor:mayor]
-        return listacuar
+    cuartil=int(valor*len(lista)/4)
+    print(cuartil)
+    if len(lista)%4!=0:
+        x=lista.pop(cuartil)
+        y=lista.pop(cuartil+1)
+        lista.insert(cuartil, x)
+        lista.insert(cuartil+1, y)
+        z=round(x+y/2,2)
+        return z
     else:
-        return f'no se puede hallar el cuartil'
+        cuartil=int(valor*len(lista)/4)
+        mayor=int(cuartil)
+        menor=int((valor-1)*len(lista)/4)
+        listaquin=lista[menor:mayor]
+        return listaquin
 
 
 list=llenarLista(50,2.00)
 print(list)
-print(ordenarListaAsc(list))
-print(len(list))
+print('lista ordenada','\n',ordenarListaAsc(list))
+print('longitud de la lista',len(list))
 num=int(input('ingresa el quintil a hallar: '))
 print(hallarQuintiles(list,num))
 num1=int(input('ingresa el cuartil a hallar: '))
