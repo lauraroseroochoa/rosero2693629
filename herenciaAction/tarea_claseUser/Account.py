@@ -1,41 +1,50 @@
 class Account:
-    def __int__(self,n_borrowedBooks,n_reservedBooks,n_returnedBooks,n_lostBooks,fineAmount):
-        self.__n_borrowedBooks=n_borrowedBooks
-        self.__n_reservedBooks=n_reservedBooks
-        self.__n_returnedBooks=n_returnedBooks
-        self.__n_lostBooks=n_lostBooks
-        self.__fineAmount=fineAmount
+    def __int__(self,n_borrowedBooks,n_reservedBooks,n_returnedBooks):
+        self.n_borrowedBooks=n_borrowedBooks
+        self.n_reservedBooks=n_reservedBooks
+        self.n_returnedBooks=n_returnedBooks
+        self.n_lostBooks=[]
+        self.fineAmount=0
 
     def claculateFine(self):
         pass
 
     def setBorrowed(self,n_borrowedBooks):
-        self.__n_borrowedBooks
+        self.n_borrowedBooks
 
     def getBorrowed(self):
-        return self.__n_borrowedBooks
+        return self.n_borrowedBooks
     
     def setReserved(self,n_reservedBooks):
-        self.__n_reservedBooks=n_reservedBooks
+        self.n_reservedBooks=n_reservedBooks
 
     def getReserved(self):
-        return self.__n_reservedBooks
+        return self.n_reservedBooks
     
     def setReturned(self,n_returnedBooks):
-        self.__n_returnedBooks=n_returnedBooks
+        self.n_returnedBooks=n_returnedBooks
 
     def getReturned(self):
-        return self.__n_returnedBooks
+        return self.n_returnedBooks
     
     def setLostBooks(self,n_lostBooks):
-        self.__n_lostBooks=n_lostBooks
+        self.n_lostBooks=n_lostBooks
 
     def getLostBooks(self):
-        return self.__n_lostBooks
+        return self.n_lostBooks
     
     def setFineAmount(self,fineAmount):
-        self.__fineAmount=fineAmount
+        self.fineAmount=fineAmount
 
     def getFineAmount(self):
-        return self.__fineAmount
+        return self.fineAmount
+    
+    def  claculateFine(self):
+        contador=0
+        for i in self.__n_lostBooks:
+            contador+=1
+            if contador!=0:
+                multa= (1600000*0.03)*contador
+            return multa
+                
     
