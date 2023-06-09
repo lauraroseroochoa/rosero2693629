@@ -1,7 +1,7 @@
 from User import *
 
 class Student(User):
-    def __init__(self,):
+    def __init__(self):
         self.__clase = []
         
     def setClase(self, clase):

@@ -9,5 +9,4 @@ class Staff(User):
         self.__dept = dept
         
     def getDept(self):
-         return self.__dept
-     
+         return self.__dept    

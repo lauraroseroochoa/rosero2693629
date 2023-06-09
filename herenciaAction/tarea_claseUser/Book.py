@@ -45,7 +45,7 @@ class Book:
             self.comentario.update({self.title:comentario})
             print(self.comentario)
             
-    """def bookRequest(self,title):
+    def bookRequest(self,title):
         if title in self.title:
             if Book.reservationStatus(self, title)=='disponible':
                 print('libro disponible para reservarlo')
@@ -55,10 +55,10 @@ class Book:
                 match selector:
                     case'1':
                         self.status = 'reservado'
-                            return self.status
+                        return self.status
                     case'2':
-                            return 'no reservado"""
+                        return 'no reservado'
+                    
     def rewnInformation(self,title):
         return self.title, self.author, self.isbn, self.publication, self.comentario, Book.reservationStatus(self, title)
-    
-    
+       
