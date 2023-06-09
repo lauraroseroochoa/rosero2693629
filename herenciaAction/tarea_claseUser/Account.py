@@ -1,28 +1,29 @@
 class Account:
-    def __int__(self,n_borrowedBooks,n_reservedBooks,n_returnedBooks):
-        self.n_borrowedBooks=n_borrowedBooks
-        self.n_reservedBooks=n_reservedBooks
-        self.n_returnedBooks=n_returnedBooks
+
+    def __init__(self,borrowedBooks:int,reservedBooks:int,returnedBooks:int):
+        self.n_borrowedBooks=borrowedBooks
+        self.n_reservedBooks=reservedBooks
+        self.n_returnedBooks=returnedBooks
         self.n_lostBooks=[]
         self.fineAmount=0
 
     def claculateFine(self):
         pass
 
-    def setBorrowed(self,n_borrowedBooks):
-        self.n_borrowedBooks
+    def setBorrowed(self,borrowedBooks):
+        self.n_borrowedBooks=borrowedBooks
 
     def getBorrowed(self):
         return self.n_borrowedBooks
     
-    def setReserved(self,n_reservedBooks):
-        self.n_reservedBooks=n_reservedBooks
+    def setReserved(self,reservedBooks):
+        self.n_reservedBooks=reservedBooks
 
     def getReserved(self):
         return self.n_reservedBooks
     
-    def setReturned(self,n_returnedBooks):
-        self.n_returnedBooks=n_returnedBooks
+    def setReturned(self,returnedBooks):
+        self.n_returnedBooks=returnedBooks
 
     def getReturned(self):
         return self.n_returnedBooks
