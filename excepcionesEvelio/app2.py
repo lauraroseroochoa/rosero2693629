@@ -2,7 +2,7 @@
 # La función debe añadir el elemento al final de la lista con la condición de no repetir ningún elemento. 
 # Además si este elemento ya se encuentra en la lista se debe invocar un error de tipo ValueError que debes capturar y mostrar este mensaje en su lugar:
 
-def agregar_una_vez (lista:list , element:int):
+def agregar_una_vez (lista:list , element:str):
     try:
         if element in lista:
             raise ValueError (f"Error: Imposible añadir elementos duplicados => {element}.")
@@ -11,30 +11,29 @@ def agregar_una_vez (lista:list , element:int):
             return lista
     except Exception as e:
         print(f"Error {e}")
+    except ValueError:
+        print('Solo puede ingresar numeros no repetidos')
+        print(f'La lista no se actualizo: {lista}')
+    except KeyboardInterrupt:
+        print('Se interrumpio la ejecucion')
     finally:
         print("Gracias por usar este programa")
 
         
 x = 1
-list = ['python, javascript, java, typescript, c, c++']
-while x !=0 :
-    x = int(input("Digita un elemento: "))
-    agregar_una_vez(list , x)
+list_lenguajes = ['python, javascript, java, typescript, c, c++']
 
-    def mayusculalist(list,case):
-        lower='abcdefghijklmnopqrstuvwxyz'
-        upper='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        text=''
-        for p in list:
-            a=0;
-            for i in lower:
-                if case=='lower':
-                    if lower[a]== p or upper[a]==p:
-                        text+=lower[a]
-                if case=='upper':
-                    if upper[a]==p or lower[a]==p:
-                        text+=upper[a]
-                a+=1
-        return text
-    
-print(mayusculalist(list,'upper'))
+while x != "0" :
+    x = input("Digita un elemento: ")
+
+    agregar_una_vez(list_lenguajes , x)
+
+def mayusculalist(list_lenguajes):
+    lista = []
+    for i in list_lenguajes:
+        mayus = i.upper()
+        lista.append (mayus)
+        del list_lenguajes[-1]
+    return lista
+
+print(mayusculalist(list_lenguajes))
